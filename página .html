@@ -1,0 +1,210 @@
+<html lang="es">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Tienda de Comida
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2&amp;family=Roboto&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: 'Poppins', sans-serif;
+    }
+    h1, h2, h3 {
+      font-family: 'Poppins', cursive;
+    }
+    /* Smooth animations with will-change for performance */
+    .animate-bounce-slow {
+      animation: bounce 2.5s infinite;
+      will-change: transform;
+    }
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-15%);
+      }
+    }
+  </style>
+ </head>
+ <body class="bg-gradient-to-b from-yellow-50 to-yellow-100 min-h-screen flex flex-col">
+  <header class="bg-yellow-400 shadow-md sticky top-0 z-50">
+   <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
+    <div class="flex items-center space-x-3">
+     <img alt="Icono de hamburguesa estilizada en colores cálidos para logo de tienda de comida" class="w-12 h-12 animate-bounce-slow" height="48" loading="lazy" src="https://i.ibb.co/BVnwZPn7/logo-arreglado.jpg" width="48"/>
+     <h1 class="text-3xl font-bold text-white select-none">
+      Sandwhish Los Bros 
+     </h1>
+    </div>
+    <ul class="hidden md:flex space-x-8 text-white font-semibold">
+     <li>
+      <a class="hover:text-yellow-200 transition" href="#menu">
+       Menú
+      </a>
+     </li>
+     <li>
+      <a class="hover:text-yellow-200 transition" href="#about">
+       Nosotros
+      </a>
+     </li>
+     <li>
+      <a class="hover:text-yellow-200 transition" href="#contact">
+       Contacto
+      </a>
+     </li>
+    </ul>
+    <button aria-label="Abrir menú" class="md:hidden text-yellow-50 focus:outline-none" id="menu-btn">
+     <i class="fas fa-bars fa-2x">
+     </i>
+    </button>
+   </nav>
+   <div class="hidden md:hidden bg-yellow-300 text-yellow-900 font-semibold px-6 py-4 space-y-4" id="mobile-menu">
+    <a class="block hover:text-yellow-700 transition" href="#menu">
+     Menú
+    </a>
+    <a class="block hover:text-yellow-700 transition" href="#about">
+     Nosotros
+    </a>
+    <a class="block hover:text-yellow-700 transition" href="#contact">
+     Contacto
+    </a>
+   </div>
+  </header>
+  <main class="flex-grow container mx-auto px-4 py-10">
+   <section class="text-center mb-16">
+    <h2 class="text-4xl md:text-5xl font-bold text-yellow-700 mb-4">
+     ¡Bienvenido a nuestro empremdimiemto 
+    </h2>
+    <p class="text-yellow-800 max-w-xl mx-auto text-lg md:text-xl leading-relaxed">
+     Descubre nuestra variedad de platillos deliciosos, frescos y preparados con amor. Aprende sobre cada uno y elige tu favorito.
+    </p>
+   </section>
+   <section class="mb-20" id="menu">
+    <h3 class="text-3xl font-bold text-yellow-700 mb-8 text-center">
+     Nuestro Menú
+    </h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+     <article aria-label="Hamburguesa clásica con queso, lechuga, tomate y pan artesanal" class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center hover:shadow-2xl transition-shadow duration-300" tabindex="0">
+      <img alt="Hamburguesa clásica con queso derretido, lechuga fresca, rodajas de tomate y pan artesanal dorado" class="rounded-lg mb-4 w-full object-cover h-48" height="200" loading="lazy" src="https://gbprodstorage.blob.core.windows.net/files/styles/recipe_main_image_mobile/windowsazurestorage/recipes/1540180568258eeee33c3e106590588bd1b71a2b5a.jpg?h=289976fd" width="300"/>
+      <h4 class="text-xl font-semibold text-yellow-800 mb-2">
+       sandidwch de pollo
+      </h4>
+      <p class="text-yellow-700 mb-4 text-center">
+       pollo esquisito, queso cheddar, lechuga, tomate y nuestra salsa especial en pan artesanal.
+      </p>
+      <button aria-label="Agregar hamburguesa clásica al carrito" class="bg-yellow-400 hover:bg-yellow-500 text-white font-semibold py-2 px-6 rounded-full focus:outline-none focus:ring-4 focus:ring-yellow-300 transition">
+       <i class="fas fa-cart-plus mr-2">
+       </i>
+       3000
+      </button>
+     </article>
+     
+     <article aria-label="Ensalada fresca con lechuga, pepino, tomate cherry, zanahoria rallada y aderezo ligero" class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center hover:shadow-2xl transition-shadow duration-300" tabindex="0">
+      <img alt="Ensalada fresca con lechuga verde, rodajas de pepino, tomates cherry, zanahoria rallada y aderezo ligero en un bowl blanco" class="rounded-lg mb-4 w-full object-cover h-48" height="200" loading="lazy" src="data:image/webp;base64,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" width="300"/>
+      <h4 class="text-xl font-semibold text-yellow-800 mb-2">
+       sandiwch de jamon
+      </h4>
+      <p class="text-yellow-700 mb-4 text-center">
+      sandiwch de jamon jugosos con una convinacion de salsas ricas.
+      </p>
+      <button aria-label="Agregar ensalada fresca al carrito" class="bg-yellow-400 hover:bg-yellow-500 text-white font-semibold py-2 px-6 rounded-full focus:outline-none focus:ring-4 focus:ring-yellow-300 transition">
+       <i class="fas fa-cart-plus mr-2">
+       </i>
+       3000
+      </button>
+     </article>
+     <article aria-label="Tacos al pastor con carne marinada, piña, cebolla y cilantro en tortillas de maíz" class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center hover:shadow-2xl transition-shadow duration-300" tabindex="0">
+      <img alt="Tacos al pastor con carne marinada, piña, cebolla picada y cilantro fresco en tortillas de maíz" class="rounded-lg mb-4 w-full object-cover h-48" height="200" loading="lazy" src="https://newmansown.com/wp-content/uploads/2024/06/lavendar-lemonade-new-768x691.png" width="300"/>
+      <h4 class="text-xl font-semibold text-yellow-800 mb-2">
+       limonada 
+      </h4>
+      <p class="text-yellow-700 mb-4 text-center">
+       limomada fria y esquizita refrescante.
+      </p>
+      <button aria-label="Agregar tacos al pastor al carrito" class="bg-yellow-400 hover:bg-yellow-500 text-white font-semibold py-2 px-6 rounded-full focus:outline-none focus:ring-4 focus:ring-yellow-300 transition">
+       <i class="fas fa-cart-plus mr-2">
+       </i>
+       500
+      </button>
+     </article>
+     
+    </div>
+   </section>
+   <section class="mb-20 max-w-4xl mx-auto text-yellow-900 px-4" id="about">
+    <h3 class="text-3xl font-bold mb-6 text-center">
+     ¿Quiénes Somos?
+    </h3>
+    <p class="text-lg leading-relaxed mb-6">
+      nos apasiona la comida deliciosa y saludable. Nuestro equipo está dedicado a preparar platillos frescos con ingredientes de la mejor calidad, para que disfrutes cada bocado.
+    </p>
+    <p class="text-lg leading-relaxed">
+     Además, queremos que aprendas sobre cada platillo, sus ingredientes y beneficios, para que tomes decisiones informadas y saludables.
+    </p>
+    <div class="flex justify-center mt-10 space-x-6">
+     <img alt="Chef sonriente preparando comida fresca en cocina profesional con utensilios y ingredientes frescos" class="rounded-full shadow-lg animate-bounce-slow" height="150" loading="lazy" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEhUTEhIVFRUXGBcXFxcXFxUXFxcYFxcaGBcYFxcYHSggGBolHRUYITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OFhAQGC0lHSUtLS0tLy0tLS0uLS0rLS0rLS0tKy0uLS0tLS4tLS0tLS0tLS0tLS0tLS0tLS0tLS01MP/AABEIAOEA4QMBIgACEQEDEQH/xAAaAAEBAAMBAQAAAAAAAAAAAAAAAQIDBQQG/8QAQhAAAgECAwIKBwQIBwEAAAAAAAECAxEEITESQQUGIlFhcYGRsfATMnKhssHRNXOCwhQjM1Jig5LSJTRCk6Lh4hb/xAAZAQEBAQEBAQAAAAAAAAAAAAAAAQIDBAX/xAAwEQEAAgIBAwAGCQUAAAAAAAAAAQIDEQQSITETIkFRgbEFFDIzNGGCodEkkcHh8P/aAAwDAQACEQMRAD8A++FgVHzX30DKwBEUgAoQQKAAYAoARELFAAAAECkAEKgBEwLgKAWABABsBchtdK0VLn8+es1BImJ8IC2BGlsALhEKAkUAEAFioAIABADKEW/ruRiVz6M7623W5+t+BJnTNpn2GW55fIhlK/nz5sQQsT2QAFUsGwAAAAWIVoBQWACBtw1Rppbm8/kzSVO2aCWjcadKSz7vovf16nOqzu72EajTunmYBjHj6ZCFuCOz0Rw2azVujXuMcRT2ZW3arXm6T0U5RslfPwfQ+0xxdZ3ce/fu3XK81bW6tPJYoZQ7oCgCNArIAKAgFhYAIApLALCwLYCCwKluAhGbPRS0szCSs7cwImJQpChUBRcCEKEAIUgVLgWAGdgwAyABgLABgLgBgEEABSFIgLchSIAUhQIjKEW3ZGIA6G2+617+K0t19B5MQo3une/uMadVxv0mAcqY+mQMEDsqFwiMAAwwAAQVLgbLAOzIAMMgbBAKgAAQMnFq11qroxAFAQAAFACwaIIgikAIIOy1aXW0vELrLpOqN62EsZEZFB589xYxzQlHdp3buZWMzOkm2mJSWDNNFgCtAQFYAlgQAZAMXCABQMZSsm7X6L295s9FP91f1/8Ak11NH2eKNnDeKlSw9WpC21CEpRurq6V1dbz0Yq1mu5h8zmZstctaUnW/5brzsl6OLtbWfMtfVPPjqkoxnUlFJRjKTtPdGLemz0HFwuJx84RkqlLPP9m/7hiqWOqQnTlVpbM4yjK0GnaSadnta2J1Yvc3Tjcqto3aP++DrUKynFSi7p6Gw8nB1B0qUIO7fq5W1ze9rmPRVqbNtqMldqKvbV6LKTOUUtMb09l82Ot+jfdmUkHteqnLpSWz3t59mQkpLVP3W9z8bGvR214c/rWHfT1AJdWvfLwLFN5qMrc7SXi7+4laTbxDeTPjx/anQgSSa1TXZ9LhO+hJrMeWseSuSN1nbZg4Rbk7Jyy7EksujO77Ti43hWP6ZClSaktl+ltmlJtOKy3rlNr+I9uNwNOstidJz36Ryu3pd9B5sBwfQoz2IQ2ZWTs7Xs21uf8ACdb2t0a08nHxYa57Wi+7d+zqUqbk3yrJW0jB69aueCWMtiXQ1tCMr5LVy5upHUwesvw+B8/iHbhGWT/YwyWbec7JdZb19SNfk5cW8zyckWntG3aCYim7ciVnv5Pf6xqpVVJXXSn0NZNPpTONqTHmHux5ceXfTO2wNFSMYNtXUZtPNO0dNzzkK0m3hcmamPXVOlBpoYmM3JRd9luL0yayenTdG4joEKGRTuAAABBBAAAY1NH2eKNvDWFdWhVpx1nCUV1tWzNdTR9nijdwtjHRo1KqjtOEJSSbteyva9nbuPVh+zL4/O6vT06fPbX93jwGHlCnGDjJtKzssjbVqbNtpON3bPLN3+hy6HDmMnFSWFhZ6frX/YebhWpi8RGMJUIQSnGd1UcnldWtsrnOdvRa7PbjrzJvHpIjXt8PoFrD218MzPheVONJzqy2YQ5Una7sty33d9my12rbzXBep7S+GZz+PKvhtndKpTT6bS2vFJ9h1xzrHt4eRj6+XFPfqHlwvGavVf6rB/q9zlU2ZW6UoNJ9F31n0WDxXpFdxcXvi7XXRl50PDgaKhTikskkeqj68eqf5DGLJabal353Fw0xzNK608nClWlhlKtUfIurQSu5VGrRSTdr2XRbNs5+C4x4mpylg0ofe3lbns4JN9F11jjrT2pYWD0dSTt0qNk+6T7zq04pJJaDJkmLahricXFfDF8kbmfzntrs9tCqpxvbrT+Zx4VtjETovRxjUh1SbTX9UW+06WF9d+zH4pnE4WlbhCl9z+eRcs7xxLjwq9HKtjjx3/Z3MJrLqj4s4OM+0v5EPjqHewesupeLODjPtL+RD46gyfdx8GuJ+Myfqd/B6y/D4HArr/EZfcw8ZHfwesuzwOBW+0pfcw8ZDJ93HwOH+Lyfq+b6DByycebwd/dquxHI2fRYqUP9NVekj7Ssppf8Zdc2dGEtmSff1PX5PsZ5+MlF+jVWK5VFqp+FLlr+lt250iz6+NjH/T8rp9lv8/xLbNXVlrLk997+5SfYTjBj/wBGw06kfWS2aa/jlyY9ibv1JmeBe21JaKKa65q/w2/qZ87xqquviqWGjnGny5+1JWiutRu/5giejHtqa/WeZFfZHn4eW/ingPRUU3rLPM7VjGnFJJLRZdxkeV9e07nYQtwwiWBNroAVkC2AZAiWKBjV0fZ4ocYqTlhq0Yq7dOSSuldtZZvJCpo/kearxnoxbThWuuam/qenFavTMTL5fLxZbZq3pXetfNjwY1GlCMpRTSzW1H6nr9NH96O9+tHRK/OeP/6qh+5W/wBt/U83CnGSlOjVhCFbblTnGP6trlOLSu75ZtGejH73WM3Ltbvj/aXX3w9tfDM53Hb/AC8fvafiy8E1ZKjTlPabVm8rv1ZL5nN4x8MQxFONOnCrtekg+VBpWTzzuWto9HraXwZPrlbRHaJju79L1V1I20fXj1T/ACGql6q6kSriFTtNqTSUr7Ku89nd2M54piLRt35lLXxWrWNz/tzuNv7TC+3P4UdU+c4X4TjiauH9HCpyJycnKDis0kj6MZZibTMNcWlqYKVtGp7/ADbML679iPxzOHwv9oUfufzyOnWxsaPLkptbKjyYuTupN7vaRwqmOWIxtOcIzUY09luUXHPak/mbtes49befjYbxy7X16vfu+ownrS6o+MjgYv7SX3EPjqHTrcIxoXlOM2nb1YuW9/U4lHFKvjvSxjNR9FGF5Rcc1KbfxIt7ROOIOLhyV5N7zHbv3fT4PWX4fA4Fb7Sl9zDxkdKtwlChdzjNp2tsxctDjYXFKtjZVYxmo+jjHlR2XdOTeXaMlomkRs4mHJXk3vNe3fu77R6qD2o2edsn8m+tWZ5jPCvl251d9/J/N3EwW76Z+kccTSL+2FjsYelJydoQUpSfQk3kuhKyXQj5XinSlUlUxNRcupJy6r7l0JWS6Ee3j1i3sU8NH1q0ry6IQadu2Wz2KR0cBhlTpxityGe2506fRuLoxTknzb5PQCWBwe0IykCpZAXAVmAyFZGwgWxAJsrmKVMox2VzLuLsrmKAbQiguZGQAxKABFFcyLYpAJlvTtll05X0Cjrl58372UrZnp7s6YsiRkCtDXORJGRGUPN/F+eY34GGW1vln1LSK7rdtzyYh5aSa37Oze2r1a5rdrORwrxjnKlUp0sNXjOUXGMpKCjG+TldTbuldrLVI7YrVrEzMvn8zDlzWrWkdve8WAl+lY2pX1hDkU3/AAwbSfU25S/EfUI5fF3Aehoxjazep1DjM77y+jMRWIrXxHYIwGREDN8MNezureb+ekmIpWeSyDMXrvTTcCwK6MmwRlSIyiLYsV3Z6Wfu+ZWhtne0YBEVVCYABBkKAQQsGAFhYgAoFwFiAACgBUFgAAYBBALAK9NColGzevaMTUaSs9fl59x5mA5+jje2F0DK4GnVlYpAVhE3l1c+e/8A67rFi8ufty7ChGYrpNIUA0qIIouAQAABkRUAIUjAIIFCoChAQAAQoCIAAAlwy3IAYDIFUE2gDTIMFZWUYuAFAAAuVkCILcgNlCntX5VvmVJmIjbAiPTUoZJLW/Pr9NDRKLTs1nkGa2i3hjcpAGwIAAUlwBQQALi5AwCKQEFZGLkbClyC5QpYDMBGQAKgwhcAGA2CA0LBhlA20JJO7fUakAkxuNPXKsmpNZPz9TyABmtIr4ALhBsACAAEAtwiFjbfoRJYqV88/ll09jKZuSzvnklft5vO81+d3yJEyVmZUhSFaAxcAGgRsWCsgTvARkCC4QFikAC4AFFyIMAAAKQpADKRBAUESAFZAAqAiAFuAABEUMACAKBsBgZXBj2ADYYgBmAAFEMnuAISiAAFHn3AFEl595EARVYZQBGRAADJABGK1KwArFDcAFZMkfqAERE5gAqkAAAAD//Z" width="150"/>
+     <img alt="Variedad de ingredientes frescos como verduras, frutas y especias sobre mesa de madera rústica" class="rounded-full shadow-lg animate-bounce-slow" height="150" loading="lazy" src="data:image/png;base64,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" width="150"/>
+     <img alt="Cliente feliz disfrutando comida en restaurante con ambiente cálido y acogedor" class="rounded-full shadow-lg animate-bounce-slow" height="150" loading="lazy" src="data:image/jpeg;base64,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" width="150"/>
+    </div>
+   </section>
+   <section class="mb-20 max-w-4xl mx-auto text-yellow-900 px-4" id="new-section">
+    <h3 class="text-3xl font-bold mb-6 text-center">
+       MISION-VISION-OBJECTIVOS DEL PASADO
+    </h3>
+    <p class="text-lg leading-relaxed mb-6">
+        &bull;nuestra mision como emprendimiento de venta de comida especializada en sandiwch es poder mejorar nuestro emprendimiento y hacerlo conocer a mas personas aca en el colegio. 
+    </p>
+    <p class="text-lg leading-relaxed">
+       
+ &bull;la vision, este es un tema inspirador por que con este ya pensamos en el futuro y como nos veriamos, nosotros nos vemos en un negocio y una empresa grande viendo como solo no vendemos comida como sandiwch si no mas productos para mas gente.
+    </p>
+<br>
+  <p class="text-lg leading-relaxed">
+      &bull;nuestro objectivo como emprendimiento es seguir creciendo y poder extendernos no solo a los barrios si no ya a comunidades extrangeras teniendo exito con nuestro emprendimiento.
+    </p>
+	<h3 class="text-3xl font-bold mb-6 text-center">
+       MISION-VISION-OBJECTIVOS DEL FUTURO
+    </h3>
+    <p class="text-lg leading-relaxed mb-6">
+       &bull; Nuestra mision como emprendedores ahora es mejorar y poder tener mas productos y vender mas en lugares externos no solo en el colegio si no tambien en barrios, etc. 
+    </p>
+    <p class="text-lg leading-relaxed mb-6">
+       
+ &bull;Nuestra vision no ha cambia ya que si, hemos vendido mas y tenemos mas variedada de productos queremos expandirnos afuera del colegio y tener negocios.
+    </p>
+<br>
+  <p class="text-lg leading-relaxed mb-6">
+     &bull;nuestro objectivo es mejorar en la venta de comida y empezar a creer en nosotros mismos e ir a vender en barrios.
+    </p>
+</section>
+
+   <section class="mb-20 max-w-4xl mx-auto text-yellow-900 px-4" id="new-section">
+    <h3 class="text-3xl font-bold mb-6 text-center">
+       COMO ERAMOS ANTES Y CUAL ES LA DIFERENCIA EN EL AHORA? 
+    </h3>
+    <p class="text-lg leading-relaxed mb-6">
+     nuestro emprendimiento a cambiado no tan notable pero lo ha hecho como un nuevo sabor del producto para tener mas variacion del menu e incluyendo limonada para acompañar a la comida.
+    </p>
+   </section>
+
+
+ 
+  </main>
+  <footer class="bg-yellow-400 text-yellow-900 py-6 mt-auto">
+   <div class="container mx-auto px-4 text-center text-sm font-semibold select-none">
+    © 2025 sandwhish. Todos los derechos reservados.
+   </div>
+  </footer>
+  <script>
+   const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+ </body>
+</html>
